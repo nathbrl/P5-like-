@@ -1,8 +1,8 @@
 /**
  * Représentation du format d'un article ainsi que le formatage des dates pour affichage
  */
-class Article{
-    constructor(/*???*/){
+let articles = class Article{
+    constructor(){
         this.id = Article.id;
         this.title = Article.title;
         this.publicationDate = Article.publicationDate;
@@ -10,3 +10,4 @@ class Article{
         this.content = Article.content;
     }
 }
+//console.log(articles);
