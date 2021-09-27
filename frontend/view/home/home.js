@@ -27,7 +27,7 @@ function displayArticle(article, i) {
     title.innerHTML = article[i].title;
     p.innerHTML = article[i].content;
     span.innerHTML = article[i].publicationDate;
-    img.src = article[i].image;
+    img.src = 'http://localhost:4000/' + article[i].image;
     //console.log(div);
     document.body.appendChild(div);
     div.appendChild(icon);
