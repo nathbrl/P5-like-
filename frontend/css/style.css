@@ -53,3 +53,16 @@ h1{
     color: yellow;
     cursor: pointer;
 }
+img{
+    width: 300px;
+}
+i.fa-star{
+    padding: 20px;
+    margin: 15px;
+}
+div.article{
+    background:gray;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}

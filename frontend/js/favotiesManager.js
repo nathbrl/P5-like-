@@ -1,23 +1,24 @@
 /**
  * Gestion des favoris, enregistrement d'un article en favoris, retrait d'un article des favoris et récupération de la liste des favoris
  */
+
 //fonction pour ajouter un favoris
-function addToFavorites(articles) {
+function addToFavorites(article) {
     
 }
 
-function suppressFavorites(articles) {
+function suppressFavorites(article) {
     
 }
 
-function getMyFavorites(articles) {
+function getMyFavorites(article) {
     
 }
 
-function registerMyFavorites(articles) {
+function registerMyFavorites(article) {
     
 }
 
-function returnFavoritesId(articles) {
+function returnFavoritesId(article) {
     
 }
