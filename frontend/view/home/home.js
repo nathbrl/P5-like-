@@ -5,16 +5,17 @@
 function getArticles () {
     fetch("http://localhost:4000/api/article/")
         .then((res) => res.json())
-        .then(article => article.forEach((publication,i) => {
-            console.log(publication,i);
-            displayArticle(article,i);
-            sortArticle(article, i);
+        .then(article => article.forEach((publication, i) => {
+            //console.log(publication);
+            //displayArticle(article,i);
+            displayArticles(article,i);
+            stringToDate(article, i);
             }));
         
 }
 getArticles();
 
-function displayArticle(article, i) {
+function displayArticles(article, i) {
     let div = document.createElement('div');
     div.classList.add('article');
     let title = document.createElement('h2');
@@ -38,7 +39,7 @@ function displayArticle(article, i) {
     p.innerHTML = article[i].content;
     span.innerHTML = article[i].publicationDate;
     img.src = 'http://localhost:4000/' + article[i].image;
-    //console.log(div);
+    //console.log(div);*/
     document.body.appendChild(div);
     div.appendChild(icon);
     div.appendChild(id);
@@ -47,10 +48,21 @@ function displayArticle(article, i) {
     div.appendChild(p);
     div.appendChild(span);
 }
-function sortArticle(article, i) {
-    const date = article[i].publicationDate;
-    console.log(date);
-    date.sort;
+function stringToDate(article, i) {
+    const stringDate = article[i];
+    console.log(stringDate);
+    const stringToDate = new Date(stringDate.publicationDate);
+    console.log(stringToDate)
+    /*const sortedDates = stringToDate.sort((a, b) => a.publicationDate - b.publicationDate)
+    console.log(sortedDates);*/
 }
-
+/*function displayArticle(article, i) {
+    const divArticle = document.getElementById(`article-${i}`);
+    console.log(divArticle);
+}
+const div1 = document.getElementById('article-1');
+const div2 = document.getElementById('article-2');
+const div3 = document.getElementById('article-3');
+const div4 = document.getElementById('article-4');
+const div5 = document.getElementById('article-5');*/
 /* ÉTAPE 2*/
